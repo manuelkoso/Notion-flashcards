@@ -9,9 +9,9 @@ const notion = new Client({ auth: process.env.NOTION_KEY });
     sorts: [
       {
         property: "Term",
-        direction: "ascending",
+        direction: "descending",
       },
     ],
   });
+  console.log(response.results[0].properties.Term.title[0].plain_text);
 })();
-
